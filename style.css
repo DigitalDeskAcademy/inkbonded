@@ -1,0 +1,87 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid red;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Layout Containers */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 1rem 0;
+}
+
+.header-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #f9faf9;
+  font-size: 2.4rem;
+}
+
+.hero-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
