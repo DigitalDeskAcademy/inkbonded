@@ -9,11 +9,12 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 html {
   font-size: 62.5%; /* 1rem = 10px */
+  height: 100%;
 }
 
 body {
@@ -23,6 +24,18 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 60vh; /* Adjust height as needed for consistency */
+  display: flex;
+  max-width: 140rem;
+  /* align-items: center;
+    justify-content: center; */
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Temporary background color to visualize spacing */
 }
 
 nav {
@@ -52,6 +65,8 @@ nav a {
 }
 
 .header {
+  display: flex;
+  height: 10vh;
   width: 100%;
   background-color: #1f2937;
   color: #e5e7eb;
@@ -72,16 +87,211 @@ nav a {
   font-size: 2.4rem;
 }
 
-.hero-section {
-  width: 90%;
+.hero {
+  width: 100%; /* Ensure the hero section spans the full width */
+  height: 90vh;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem;
+  background-color: #f4f4f4; /* Temporary background color to visualize spacing */
+}
+
+.hero-image,
+.hero-text {
+  flex: 1; /* Flexibly divide the space */
+  margin: 0 1rem; /* Add some margin for spacing between columns */
+}
+
+.hero-image {
+  background-image: url("images/fantasy_characters_sitting_around_reading_transparent.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  height: 60vh; /* Adjust height as needed */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem; /* Adjust as needed */
+  margin-bottom: 3rem;
+}
+
+.hero-cta-btn {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+.hero-cta-btn:hover {
+  background-color: #2c71bc;
+}
+
+.cards-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+  max-width: 120rem;
+  height: 80vh;
+}
+
+.card-header {
+  font-size: 4rem;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  color: #e0e0e0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 2rem;
+  background-color: #1f2937;
+  padding: 0 2rem;
+  width: 100%
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  height: 25rem;
+  margin-top: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+.card-text {
+  text-align: center;
+}
+
+/* Quote section */
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-size: 3.6rem;
+  height: 80vh;
+}
+
+.quote {
+  font-size: 3.8rem;
+  font-style: italic;
+  color: #333;
+  max-width: 80rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem;
+  border-left: 4px solid #ccc; /* Optional: Add a left border to the blockquote */
+}
+
+.author {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20rem;
+  margin-top: 1rem;
+  font-size: 2.8rem;
+  color: #555;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Footer CTA section */
+
+.cta-footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #555;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+  padding: 0 2rem;
+  gap: 5rem;
+  background-color: #007bff;
+  border-radius: 0.5rem;
+}
+.btn-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-container-left h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.cta-signup-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.footer-cta-btn {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+.hero-cta-btn:hover {
+  background-color: #2c71bc;
+}
+
+.footer-cta-btn:hover {
+  background-color: #2c71bc;
 }
 
 .footer {
+  height: 10vh;
+  margin-top: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+  background-color: #1f2937;
 }
